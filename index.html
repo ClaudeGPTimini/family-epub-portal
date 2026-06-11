@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Family EPUB Library</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      window.PORTAL_CONFIG = {
+        requestFormUrl: "request.html",
+      };
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Family EPUB Library home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>Family EPUB Library</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#latest">Latest</a>
+        <a href="#status">Status</a>
+        <a class="nav-action" id="navRequestLink" href="#">Request</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">Private family queue</p>
+          <h1 id="hero-title">Request EPUBs and track what has been added.</h1>
+          <p class="hero-copy">
+            A lightweight shared portal for book requests, recent uploads, and queue status.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" id="heroRequestLink" href="#">
+              <i data-lucide="plus" aria-hidden="true"></i>
+              Request a Book
+            </a>
+            <a class="button secondary" href="#latest">
+              <i data-lucide="library" aria-hidden="true"></i>
+              Latest Adds
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="summary-strip" aria-label="Library summary">
+        <div>
+          <span class="summary-value" id="latestCount">0</span>
+          <span class="summary-label">latest additions</span>
+        </div>
+        <div>
+          <span class="summary-value" id="openCount">0</span>
+          <span class="summary-label">active requests</span>
+        </div>
+        <div>
+          <span class="summary-value" id="uploadedCount">0</span>
+          <span class="summary-label">ready in Drive</span>
+        </div>
+      </section>
+
+      <section class="section" id="latest" aria-labelledby="latest-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Recently added</p>
+            <h2 id="latest-title">Latest books</h2>
+          </div>
+          <a class="text-link" id="latestRequestLink" href="#">Suggest another</a>
+        </div>
+        <div class="book-grid" id="latestBooks" aria-live="polite"></div>
+      </section>
+
+      <section class="section status-section" id="status" aria-labelledby="status-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Queue</p>
+            <h2 id="status-title">Request status</h2>
+          </div>
+          <label class="search-box">
+            <i data-lucide="search" aria-hidden="true"></i>
+            <span class="sr-only">Search requests</span>
+            <input id="statusSearch" type="search" placeholder="Search title or ID" />
+          </label>
+        </div>
+        <div class="table-shell">
+          <table>
+            <thead>
+              <tr>
+                <th>Request</th>
+                <th>Book</th>
+                <th>Status</th>
+                <th>Checked</th>
+              </tr>
+            </thead>
+            <tbody id="statusRows"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Family EPUB Library</span>
+      <span>Authorized EPUB sources only</span>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

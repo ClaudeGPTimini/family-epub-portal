@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Request a Book | Family EPUB Library</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Family EPUB Library home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>Family EPUB Library</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#latest">Latest</a>
+        <a href="index.html#status">Status</a>
+      </nav>
+    </header>
+
+    <main class="request-page">
+      <section class="request-panel" aria-labelledby="request-title">
+        <p class="eyebrow">Book request</p>
+        <h1 id="request-title">Request form coming next.</h1>
+        <p>
+          This portal is live. The request intake will be connected to a public Google Form
+          that does not require sign-in.
+        </p>
+        <p>
+          The form will ask for title, author, ISBN, notes, and an optional authorized EPUB URL.
+          No email address is required.
+        </p>
+        <a class="button primary" href="index.html">
+          <i data-lucide="arrow-left" aria-hidden="true"></i>
+          Back to Library
+        </a>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    </script>
+  </body>
+</html>

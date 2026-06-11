@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "added": "2026-06-10",
+    "source": "Standard Ebooks",
+    "filename": "Austen, Jane - Pride and Prejudice.epub"
+  },
+  {
+    "title": "A Study in Scarlet",
+    "author": "Arthur Conan Doyle",
+    "added": "2026-06-09",
+    "source": "Local folder",
+    "filename": "Doyle, Arthur Conan - A Study in Scarlet.epub"
+  },
+  {
+    "title": "The Wonderful Wizard of Oz",
+    "author": "L. Frank Baum",
+    "added": "2026-06-08",
+    "source": "Project Gutenberg",
+    "filename": "Baum, L. Frank - The Wonderful Wizard of Oz.epub"
+  }
+]
