@@ -1,0 +1,42 @@
+[worker]
+# Fallback request queue for testing. In production, use request_backend below.
+requests_csv = "requests.example.csv"
+staging_dir = "staging"
+
+[request_backend]
+# Paste the Apps Script web app URL after deployment.
+url = ""
+
+# Must match SETTINGS.WORKER_SECRET in apps-script/Code.gs.
+secret = "CHANGE_ME_TO_A_LONG_RANDOM_SECRET"
+
+[site]
+latest_json = "../site/data/latest-books.json"
+status_json = "../site/data/request-status.json"
+
+[google_drive]
+# Configure with: rclone config
+rclone_remote = "gdrive"
+
+# The private Google Drive folder where EPUBs are uploaded.
+folder = "Family EPUB Library"
+
+rclone_path = "rclone"
+
+[sources]
+# Folders containing EPUBs you are authorized to import.
+local_folders = [
+  "authorized-epubs"
+]
+
+# Direct EPUB links are accepted only from these domains.
+direct_url_allowed_domains = [
+  "standardebooks.org",
+  "gutenberg.org",
+  "www.gutenberg.org"
+]
+
+# Searches Project Gutenberg metadata through Gutendex.
+gutendex_enabled = true
+gutendex_base_url = "https://gutendex.com/books"
+timeout_seconds = 8

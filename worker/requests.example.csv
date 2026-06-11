@@ -1,0 +1,4 @@
+request_id,title,author,isbn,notes,source_url
+REQ-2026-0001,Pride and Prejudice,Jane Austen,,Public domain example,
+REQ-2026-0002,A Study in Scarlet,Arthur Conan Doyle,,Look in authorized local folder,
+REQ-2026-0003,Emma,Jane Austen,,Direct URL example,https://standardebooks.org/ebooks/jane-austen/emma/downloads/jane-austen_emma.epub
