@@ -440,6 +440,83 @@ tbody tr:last-child td {
   margin-top: 12px;
 }
 
+.request-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.request-form label {
+  display: grid;
+  gap: 7px;
+}
+
+.request-form label span {
+  color: #41506a;
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.request-form input,
+.request-form textarea {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  font: inherit;
+  padding: 12px 13px;
+  width: 100%;
+}
+
+.request-form textarea {
+  resize: vertical;
+}
+
+.form-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.button.quiet {
+  background: #eef2f6;
+  color: var(--ink);
+}
+
+.form-alert {
+  border-radius: 8px;
+  font-weight: 750;
+  margin-top: 18px;
+  padding: 12px 14px;
+}
+
+.form-alert[data-tone="info"] {
+  background: #e6eef8;
+  color: var(--blue);
+}
+
+.form-alert[data-tone="success"] {
+  background: #ddefe8;
+  color: var(--green-dark);
+}
+
+.form-alert[data-tone="error"] {
+  background: #f7e6e8;
+  color: var(--red);
+}
+
+.hp-field {
+  display: none !important;
+}
+
+.submit-frame {
+  border: 0;
+  height: 1px;
+  opacity: 0;
+  position: absolute;
+  width: 1px;
+}
+
 .sr-only {
   height: 1px;
   margin: -1px;

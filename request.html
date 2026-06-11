@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Request a Book | Family EPUB Library</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="config.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -21,27 +22,50 @@
     <main class="request-page">
       <section class="request-panel" aria-labelledby="request-title">
         <p class="eyebrow">Book request</p>
-        <h1 id="request-title">Request form coming next.</h1>
-        <p>
-          This portal is live. The request intake will be connected to a public Google Form
-          that does not require sign-in.
-        </p>
-        <p>
-          The form will ask for title, author, ISBN, notes, and an optional authorized EPUB URL.
-          No email address is required.
-        </p>
-        <a class="button primary" href="index.html">
-          <i data-lucide="arrow-left" aria-hidden="true"></i>
-          Back to Library
-        </a>
+        <h1 id="request-title">Request a book.</h1>
+        <p>No account or email address is required. Add as much detail as you know.</p>
+        <div class="form-alert" id="requestAlert" role="status"></div>
+        <form class="request-form" id="bookRequestForm" method="post" target="requestFrame">
+          <label>
+            <span>Title</span>
+            <input name="title" required autocomplete="off" />
+          </label>
+          <label>
+            <span>Author</span>
+            <input name="author" autocomplete="off" />
+          </label>
+          <label>
+            <span>ISBN</span>
+            <input name="isbn" autocomplete="off" />
+          </label>
+          <label>
+            <span>Authorized EPUB URL</span>
+            <input name="source_url" type="url" placeholder="https://example.com/book.epub" />
+          </label>
+          <label>
+            <span>Notes</span>
+            <textarea name="notes" rows="4"></textarea>
+          </label>
+          <label class="hp-field" aria-hidden="true">
+            <span>Leave this blank</span>
+            <input name="website" tabindex="-1" autocomplete="off" />
+          </label>
+          <div class="form-actions">
+            <button class="button primary" type="submit">
+              <i data-lucide="send" aria-hidden="true"></i>
+              Send Request
+            </button>
+            <a class="button quiet" href="index.html">
+              <i data-lucide="arrow-left" aria-hidden="true"></i>
+              Back
+            </a>
+          </div>
+        </form>
+        <iframe class="submit-frame" id="requestFrame" name="requestFrame" title="Request submission"></iframe>
       </section>
     </main>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-    <script>
-      if (window.lucide) {
-        window.lucide.createIcons();
-      }
-    </script>
+    <script src="request.js"></script>
   </body>
 </html>
