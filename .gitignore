@@ -1,0 +1,6 @@
+worker/config.local.toml
+worker/staging/
+worker/authorized-epubs/*.epub
+worker/__pycache__/
+worker/tests/__pycache__/
+*.pyc
